@@ -71,6 +71,7 @@ recognition.onaudiostart = () => {
 };
 
 recognition.onspeechend = (e) => {
+  recognition.stop();
   micBtn.innerText = 'mic';
 };
 
