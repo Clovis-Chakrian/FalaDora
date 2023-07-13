@@ -84,4 +84,5 @@ recognition.addEventListener("result", (event) => {
   console.log(conta + ' = ' + resultado);
   previousEquationElement.innerText = conta;
   resultElement.innerText = resultado;
+  recognition.stop();
 });
