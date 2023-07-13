@@ -1,8 +1,3 @@
-window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-window.SpeechGrammarList = window.SpeechGrammarList || window.webkitSpeechGrammarList;
-const recognition = new window.SpeechRecognition();
-recognition.lang = 'pt-BR';
-
 const buttons = ['7', '8', '9', '/', '6', '5', '4', '*', '1', '2', '3', '-', 'mic', '0', '.', '+', 'AC', '=']
 const buttonsDiv = document.getElementById('buttons');
 let equation = '';
@@ -16,6 +11,11 @@ for (let button = 0; button < buttons.length; button++) {
   buttonElement.style.backgroundColor = isNaN(Number(buttons[button])) ? '#FFA000' : '#E5E5E5'
   buttonsDiv.appendChild(buttonElement);
 };
+
+window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+window.SpeechGrammarList = window.SpeechGrammarList || window.webkitSpeechGrammarList;
+const recognition = new window.SpeechRecognition();
+recognition.lang = 'pt-BR';
 
 const resultElement = document.getElementById('result');
 const micBtn = document.getElementById('mic');

@@ -5,6 +5,8 @@ Fala + CalculaDora tendeu tendeu? Rsrs (péssimo trocadilho eu sei eu sei)
 
 ### Link para acessar online
 
+<https://faladora.vercel.app/>
+
 ### Como rodar
 
 Para rodar localmente, a única coisa necessária é: um navegador. É isso mesmo, você só vai precisar baixar os arquivos deste repositório, deixá-los em uma mesma pasta e abrir o index.html com seu navegador favorito.
