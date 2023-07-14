@@ -84,6 +84,7 @@ recognition.addEventListener("result", (event) => {
   const fala = event.results[0][0].transcript;
   const conta = replaceTextForDigit(fala);
   console.log(event);
+  console.log(conta)
   const resultado = eval(conta.replaceAll('x', '*'));
   console.log(event);
   console.log(conta);
