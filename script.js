@@ -100,6 +100,7 @@ function replaceTextForDigit(text) {
   let result;
   for (let i = 0; i < strNums.length; i++) {
     result = text.replaceAll(strNums[i], strDigits[i]);
+    console.log(text.replaceAll(strNums[i], strDigits[i]))
   }
 
   return result;
