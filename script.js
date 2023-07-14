@@ -97,9 +97,10 @@ recognition.addEventListener("result", (event) => {
 function replaceTextForDigit(text) {
   const strNums = ["um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "mais", "menos"];
   const strDigits = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "mais", "menos"];
+  let result;
   for (let i = 0; i < strNums.length; i++) {
-    text.replaceAll(strNums[i], strDigits[i]);
+    result = text.replaceAll(strNums[i], strDigits[i]);
   }
 
-  return text;
+  return result;
 }
