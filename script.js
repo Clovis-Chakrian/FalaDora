@@ -1,16 +1,6 @@
-const buttons = ['7', '8', '9', '/', '6', '5', '4', '*', '1', '2', '3', '-', 'mic', '0', '.', '+', 'AC', '=']
-const buttonsDiv = document.getElementById('buttons');
 let equation = '';
 const previousEquationElement = document.getElementById('previous');
 let previousEquationResult = '';
-
-for (let button = 0; button < buttons.length; button++) {
-  const buttonElement = document.createElement('button');
-  buttonElement.innerText = buttons[button];
-  buttonElement.id = buttons[button] === '=' ? 'eq' : buttons[button];
-  buttonElement.style.backgroundColor = isNaN(Number(buttons[button])) ? '#FFA000' : '#E5E5E5'
-  buttonsDiv.appendChild(buttonElement);
-};
 
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 window.SpeechGrammarList = window.SpeechGrammarList || window.webkitSpeechGrammarList;
