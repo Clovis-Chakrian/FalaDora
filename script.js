@@ -66,8 +66,12 @@ micBtn.onclick = () => {
   recognition.start();
 };
 
-recognition.onaudiostart = () => {
+recognition.onstart = () => {
   micBtn.innerText = '...';
+};
+
+recognition.onend = () => {
+  micBtn.innerText = 'mic';
 };
 
 recognition.onspeechend = (e) => {
