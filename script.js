@@ -81,7 +81,8 @@ recognition.onspeechend = (e) => {
 };
 
 recognition.addEventListener("result", (event) => {
-  const conta = event.results[0][0].transcript;
+  const fala = event.results[0][0].transcript;
+  const conta = replaceTextForDigit(fala);
   console.log(event);
   const resultado = eval(conta.replaceAll('x', '*'));
   console.log(event);
@@ -91,3 +92,13 @@ recognition.addEventListener("result", (event) => {
   resultElement.innerText = resultado;
   recognition.stop();
 });
+
+function replaceTextForDigit(text) {
+  const strNums = ["um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "mais", "menos"];
+  const strDigits = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "mais", "menos"];
+  for (let i = 0; i < strNums.length; i++) {
+    text.replaceAll(strNums[i], strDigits[i]);
+  }
+
+  return text;
+}
