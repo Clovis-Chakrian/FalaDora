@@ -64,6 +64,7 @@ buttonsElement.forEach(button => {
 
 micBtn.onclick = () => {
   recognition.start();
+  console.log(recognition.continuous)
 };
 
 recognition.onstart = () => {
